@@ -1,4 +1,3 @@
-#include <QtOpenGL>
 #include "DirectionalLight.h"
 
 DirectionalLight::DirectionalLight(QObject *parent)
@@ -40,26 +39,27 @@ void DirectionalLight::draw(bool d) const
 
    QVector3D lp = getLightPosition();
 
-   GLfloat lightPosition[4];
-   lightPosition[0] = lp.x();
-   lightPosition[1] = lp.y();
-   lightPosition[2] = lp.z();
-   lightPosition[3] = 0;
+   if(d) {
+       GLfloat lightPosition[4];
+       lightPosition[0] = lp.x();
+       lightPosition[1] = lp.y();
+       lightPosition[2] = lp.z();
+       lightPosition[3] = 0;
 
-   /*glDisable(GL_LIGHTING);
-   glDisable(GL_TEXTURE_2D);
-   if(d)
-   {
+       glDisable(GL_LIGHTING);
+       glDisable(GL_TEXTURE_2D);
+
        glBegin(GL_LINES);
-       glColor3f(1.0,1.0,0.0);
-       glVertex3f(0.0,0.0,0.0);
-       glVertex4fv(lightPosition);
+           glColor3f(1.0,1.0,0.0);
+           glVertex3f(0.0,0.0,0.0);
+           glVertex4fv(lightPosition);
        glEnd();
-   }
-   glEnable(GL_LIGHTING);
-   glEnable(GL_TEXTURE_2D);*/
 
-   //glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+       glEnable(GL_LIGHTING);
+       glEnable(GL_TEXTURE_2D);
+
+       glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+   }
 }
 
 void DirectionalLight::cleanTransformations()

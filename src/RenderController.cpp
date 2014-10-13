@@ -1,9 +1,5 @@
-#include <QDebug>
-#include <QtOpenGL>
-#include <QPoint>
-#include <QFileDialog>
-
 #include "RenderController.h"
+
 #include "GLDisplay.h"
 #include "MainWindow.h"
 #include "Object3D.h"

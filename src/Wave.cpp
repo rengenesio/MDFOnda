@@ -1,8 +1,4 @@
-#include <QtOpenGL>
-#include <QVector3D>
 #include "Wave.h"
-
-#include <QDebug>
 
 Color color(double u, double min, double max);
 

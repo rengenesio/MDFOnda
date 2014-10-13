@@ -9,6 +9,11 @@
 #include <QList>
 #include <QPair>
 #include <QTimer>
+#include <QDebug>
+#include <QtOpenGL>
+#include <QPoint>
+#include <QFileDialog>
+
 
 class DirectionalLight;
 class MainWindow;

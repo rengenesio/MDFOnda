@@ -6,6 +6,7 @@
 #include <QQuaternion>
 #include <QMatrix4x4>
 #include <QVector>
+#include <QtOpenGL>
 
 class DirectionalLight : public QObject
 {

@@ -4,12 +4,13 @@
 #include <iostream>
 #include <fstream>
 #include <QTimer>
+#include <QtOpenGL>
+#include <QVector3D>
 
 #include "Color.h"
 #include "MainWindow.h"
 #include "Object3D.h"
 #include "Vector.h"
-
 
 #include <GL/glu.h>
 #include <GL/glut.h>

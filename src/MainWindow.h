@@ -16,6 +16,7 @@
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
+#include "GLDisplay.h"
 #include "RenderController.h"
 
 class GLDisplay;

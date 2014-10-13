@@ -5,9 +5,15 @@
 #include <QMouseEvent>
 #include <QMoveEvent>
 #include <QPoint>
+#include <QToolTip>
+#include <QMatrix4x4>
 
 #include <GL/glut.h>
-
+#ifdef __APPLE__
+    #include <OpenGL/glu.h>
+#else
+    #include <GL/glu.h>
+#endif
 
 #define NULLPOINT   QPoint(-1,-1)
 #define EPSILON     0.001

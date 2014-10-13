@@ -1,13 +1,13 @@
 QT       += core gui opengl
 
-TARGET = MDFonda
+TARGET = release/MDFonda
 TEMPLATE = app
 
 unix{
-    LIBS += -lGLU -lglut
+    LIBS += -lGLU -lglut -Wunused-parameter
 }
 
-SOURCES += src/main.cpp\
+SOURCES +=\
     src/MainWindow.cpp\
     src/GLDisplay.cpp \
     src/ArcBall.cpp \
@@ -18,7 +18,8 @@ SOURCES += src/main.cpp\
     src/Wave.cpp \
     src/Vector.cpp \
     src/Point.cpp \
-    src/Color.cpp
+    src/Color.cpp \
+    src/Main.cpp
 
 
 HEADERS  += src/MainWindow.h\

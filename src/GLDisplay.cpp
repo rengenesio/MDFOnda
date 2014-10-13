@@ -1,12 +1,4 @@
-#include <QDebug>
-#include <QToolTip>
 #include "GLDisplay.h"
-#include <QMatrix4x4>
-#ifdef __APPLE__
-    #include <OpenGL/glu.h>
-#else
-    #include <GL/glu.h>
-#endif
 
 #define ZOOMSTEP 0.05
 

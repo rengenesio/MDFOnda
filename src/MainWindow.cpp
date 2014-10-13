@@ -1,6 +1,4 @@
 #include "MainWindow.h"
-#include "GLDisplay.h"
-#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
@@ -84,15 +82,15 @@ void MainWindow::createMenus()
 void MainWindow::createToolBar()
 {
     toolBar = addToolBar(tr("Play"));
-    actionRewind = new QAction(QIcon("images/buttons/rewind.png"), "Rewind", toolBar);
+    actionRewind = new QAction(QIcon("resources/images/buttons/rewind.png"), "Rewind", toolBar);
     actionRewind->setEnabled(false);
-    actionSlower = new QAction(QIcon("images/buttons/slower.png"), "Slower", toolBar);
+    actionSlower = new QAction(QIcon("resources/images/buttons/slower.png"), "Slower", toolBar);
     actionSlower->setEnabled(false);
-    actionPlayPause = new QAction(QIcon("images/buttons/play.png"), "Play", toolBar);
+    actionPlayPause = new QAction(QIcon("resources/images/buttons/play.png"), "Play", toolBar);
     actionPlayPause->setEnabled(false);
-    actionFaster = new QAction(QIcon("images/buttons/faster.png"), "Faster", toolBar);
+    actionFaster = new QAction(QIcon("resources/images/buttons/faster.png"), "Faster", toolBar);
     actionFaster->setEnabled(false);
-    actionForward = new QAction(QIcon("images/buttons/forward.png"), "Forward", toolBar);
+    actionForward = new QAction(QIcon("resources/images/buttons/forward.png"), "Forward", toolBar);
     actionForward->setEnabled(false);
     toolBar->addAction(actionRewind);
     toolBar->addAction(actionSlower);
@@ -109,8 +107,7 @@ void MainWindow::createToolBar()
 
 void MainWindow::createStatusBar()
 {
-    statusBar()->showMessage("aaaaaaaaa");
-    statusBar()->showMessage("bbbbbbbbb");
+    statusBar()->showMessage("MDFonda");
 }
 
 void MainWindow::openFile()
@@ -139,7 +136,7 @@ void MainWindow::saveFile()
 
 void MainWindow::closeWave()
 {
-    actionPlayPause->setIcon(QIcon("images/buttons/play.png"));
+    actionPlayPause->setIcon(QIcon("resources/images/buttons/play.png"));
     actionRewind->setEnabled(false);
     actionSlower->setEnabled(false);
     actionPlayPause->setEnabled(false);
@@ -149,7 +146,7 @@ void MainWindow::closeWave()
 
 void MainWindow::rewind()
 {
-    actionPlayPause->setIcon(QIcon("images/buttons/play.png"));
+    actionPlayPause->setIcon(QIcon("resources/images/buttons/play.png"));
     playing = false;
     emit(rewindWave());
 }
@@ -158,19 +155,19 @@ void MainWindow::playingToggle()
 {
     if(playing)
     {
-        actionPlayPause->setIcon(QIcon("images/buttons/play.png"));
+        actionPlayPause->setIcon(QIcon("resources/images/buttons/play.png"));
         playing = false;
     }
     else
     {
-        actionPlayPause->setIcon(QIcon("images/buttons/pause.png"));
+        actionPlayPause->setIcon(QIcon("resources/images/buttons/pause.png"));
         playing = true;
     }
 }
 
 void MainWindow::forward()
 {
-    actionPlayPause->setIcon(QIcon("images/buttons/play.png"));
+    actionPlayPause->setIcon(QIcon("resources/images/buttons/play.png"));
     playing = false;
     emit(forwardWave());
 }
