@@ -1,6 +1,8 @@
 MDFOnda
 =======
 
+(Para instruções em português (Brasil), veja arquivo REAMDE.por)
+
 MDFonda is a Wave x time visualization (calculated by Finite Difference Method), written in Matlab and C++ with QT and OpenGL.
 
 
